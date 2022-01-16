@@ -1,0 +1,19 @@
+{
+  "name": "safe-ws",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Remo Yeginsoy",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "big-integer": "^1.6.51",
+    "bufferutil": "^4.0.6",
+    "child_process": "^1.0.2",
+    "express": "^4.17.2",
+    "utf-8-validate": "^5.0.8",
+    "ws": "^8.4.0"
+  }
+}

@@ -1,0 +1,43 @@
+#!/usr/bin/python3
+import RPi.GPIO as GPIO
+from time import sleep
+import time
+
+servopin = 4
+GPIO.setmode(GPIO.BCM)
+GPIO.setup(servopin, GPIO.OUT)
+
+
+pwm = GPIO.PWM(servopin, 50) # GPIO 4 for PWM with 500Hz
+pwm.start (0) # Initialization
+
+def SetAngle(angle):
+	duty = angle / 18 + 2
+	GPIO.output(servopin, True)
+	pwm.ChangeDutyCycle(duty)
+	sleep(1)
+	GPIO.output(servopin, False)
+	pwm.ChangeDutyCycle(0)
+
+SetAngle(110)
+
+
+pwm.stop()
+GPIO.cleanup()
+
+with open("/var/www/html/smartsafe.ch/index.html", "r") as f:
+        statesafe= f.read()
+        f.close()
+
+with open("/var/www/html/smartsafe.ch/index.html", "w") as f:
+	f.write(statesafe.replace(">Locked</output>",">Open</output>"))
+	f.close()
+
+with open("/usr/local/etc/safestat", "r") as s:
+	status=s.read()
+	s.close()
+
+with open("/usr/local/etc/safestat", "w") as s:
+	s.write(status.replace("Locked","Open"))
+	s.close()
+

@@ -1,0 +1,28 @@
+strong{
+    margin-top: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    min-width: 300px;
+    max-width: fit-content;
+    height: 50px;
+    border-width: 5px;
+    border-color: rgb(0, 96, 0);
+    font-size: 40px;
+    color: rgb(111, 178, 245);
+}
+
+input{
+    margin-top: 5px;
+    margin-left: auto;
+    margin-right: auto;
+    height: 100px;
+    width: 100px;
+    line-height: 50px;
+    font-size: 40px;
+    font-weight: bold;
+    color: white;
+    padding: 0px;
+    background: transparent;
+    border-width: 5px;
+    border-color: blue;
+}

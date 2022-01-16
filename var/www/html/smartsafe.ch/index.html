@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Autonome Safe</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/styles.css?h=d41d8cd98f00b204e9800998ecf8427e">
+    <link rel="stylesheet" href="assets/css/button1.css">
+    <script type="text/javascript" src="assets/js/functions.js"></script>
+    <script src="https://peterolson.github.io/BigInteger.js/BigInteger.min.js"></script>
+</head>
+
+<body onload="LoadStatus()">
+    <div style="background:url(&quot;assets/img/code-wallpaper-38.jpg&quot;) round; background-size: contain; height: 1080px;">
+        <div class="container" style="text-align: center;">
+            <strong style="background: transparent; color: rgb(210, 212, 61);">Pincode:
+                <br>
+                <output id="OutputPIN"></output>
+            </strong>
+            <br>
+            <strong style="background: transparent; color: orange;">Safe is: 
+                <output id="IsOpenOrClosed">Open</output>
+            </strong>
+        </div>
+        <div class="container" style="text-align: center; margin-top: 100px;">
+            <input type="button" name="buttons" onclick="Index=0;ButtonPress()" value="1">
+            <input type="button" name="buttons" onclick="Index=1;ButtonPress()" value="2">
+            <input type="button" name="buttons" onclick="Index=2;ButtonPress()" value="3">
+            <br>
+            <input type="button" name="buttons" onclick="Index=3;ButtonPress()" value="4">
+            <input type="button" name="buttons" onclick="Index=4;ButtonPress()" value="5">
+            <input type="button" name="buttons" onclick="Index=5;ButtonPress()" value="6">
+            <br>
+            <input type="button" name="buttons" onclick="Index=6;ButtonPress()" value="7">
+            <input type="button" name="buttons" onclick="Index=7;ButtonPress()" value="8">
+            <input type="button" name="buttons" onclick="Index=8;ButtonPress()" value="9">
+            <br>
+            <input type="button" name="buttonDel" onclick="Reset()" value="Del">
+            <input type="button" name="buttons" onclick="Index=9;ButtonPress()" value="0">
+            <input type="button" name="buttonOK" onclick="Submit()" value="OK">
+            <br>
+            <input type="button" name="Lock" onclick="locking()" value="Lock">
+        </div>
+    </div>
+
+</body>
+
+</html>

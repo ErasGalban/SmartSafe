@@ -1,0 +1,19 @@
+[Unit]
+Description=Safe Daemon
+After=syslog.target network.target
+
+[Service]
+#User=1000
+#Group=1000
+
+
+Type=simple
+WorkingDirectory=/usr/local/lib/smartsafe
+ExecStart=/usr/local/bin/node index.js
+TimeoutStopSec=40
+KillMode=process
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target
+
